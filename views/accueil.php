@@ -1,6 +1,6 @@
 <?php
 
 echo "Page accueil";
-echo "coucou";
+echo "coucou2";
 
 ?>
