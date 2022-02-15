@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 @primaryColor: #88CCF1;
 @secondaryColor: #3587A4;
 @ternaryColor: #39393A;
@@ -8,18 +10,57 @@
     backdrop-filter: blur(0.2rem);
     position: sticky;
     top: 0;
+    box-shadow: 0px 5px 15px rgba(200, 200, 200, 0.7);
 
     #header-inline{
         height: 75px;
+
+        #logo span{
+            font-size: 2em;
+        }
+
+        #logo span:nth-child(1){
+            font-family: Lobster;
+            color: @secondaryColor;
+        }
+
+        #logo span:nth-child(2){
+            position: relative;
+            left: -6px;
+            color: @ternaryColor;
+            font-weight: bolder;
+        }
        
-        .menu a{
-            text-align: center;
-            border-bottom: 3px solid transparent;
-            transition: border 0.3s ease-in-out;
-            &:hover{
-                border-bottom: 3px solid black;
+        .menu{
+            height: 100%;
+        }
+
+        .login{
+            height: 100%;
+            i{
+                color: @ternaryColor;
             }
         }
+
+        .link{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            a{
+                text-align: center;
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover{
+                background-color: rgba(240, 240, 240, 0.7);
+                a{
+                    border-bottom: 3px solid @secondaryColor;
+                }
+            }
+        }
+
         #login{
             margin-left: 5px;
         }

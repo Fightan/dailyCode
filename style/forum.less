@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body{
     font-family: Roboto, Verdana, sans-serif;
     font-size: 15px;
     line-height: 1.25em;
     color: black;
+    background-color: rgb(240, 240, 240);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -12,8 +14,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 2em;
-    color: #000;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 3em;
+    font-family: Lobster;
+    color: @secondaryColor;
 }
 
 h2{
@@ -33,5 +39,45 @@ a{
     &:hover{
         text-decoration: none;
         color: inherit;
+    }
+}
+
+@primaryColor: #88CCF1;
+@secondaryColor: #3587A4;
+@ternaryColor: #39393A;
+
+@forumColor: rgb(225, 225, 225);
+#forum{ 
+    min-height: 100vh;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .row{
+        border: 1px solid @forumColor;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 0px;
+
+        #table{
+            width: 100%;
+            th, td {
+                padding: 1em;
+            }
+
+            th{
+                font-weight: bold;
+            }
+
+            td{
+                font-size: 0.9em;
+            }
+
+            tr:nth-child(odd){
+                background-color: white;
+            }
+            tr:nth-child(even){
+                background-color: @forumColor;
+            }
+        }
     }
 }
