@@ -1,6 +1,6 @@
-<nav>
+<nav id="header">
     <div class="container-md">
-        <div id="header" class="row justify-content-between align-items-center">
+        <div id="header-inline" class="row justify-content-between align-items-center">
             <div class="col-2 d-flex justify-content-center">
                 <a href="">
                     <i class="fa-solid fa-3x fa-newspaper"></i>
