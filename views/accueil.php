@@ -1,5 +1,4 @@
 <?php
 
 echo "Page accueil";
-
 ?>
