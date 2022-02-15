@@ -4,7 +4,7 @@
         
         private static $get;
         private static $ressources;
-        private static $db_name = "projetPHP";
+        private static $db_name = "dailyCode";
         private static $db_user = "root";
         private static $db_pass = "root";
         private static $db_host = "localhost";
