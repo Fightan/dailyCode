@@ -2,7 +2,7 @@
     <div class="container-md">
         <div id="header-inline" class="row justify-content-between align-items-center">
             <div id="logo" class="col-2 d-flex justify-content-start">
-                <a href="">
+                <a href="?p=accueil">
                     <span>daily</span>
                     <span>Code</span>
                 </a>
