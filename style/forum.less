@@ -62,6 +62,8 @@ a{
             width: 100%;
             th, td {
                 padding: 1em;
+                padding-left: 2em;
+                padding-right: 2em;
             }
 
             th{
@@ -70,6 +72,12 @@ a{
 
             td{
                 font-size: 0.9em;
+
+                a{
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }
 
             tr:nth-child(odd){

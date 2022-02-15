@@ -18,7 +18,7 @@
                     <th>Date</th>
                 </tr>
                 <tr>
-                    <td>Entry First Line 1</td>
+                    <td class="link"><a href="">Entry First Line 1</a></td>
                     <td>Entry First Line 2</td>
                     <td>Entry First Line 3</td>
                     <td>Entry First Line 4</td>
