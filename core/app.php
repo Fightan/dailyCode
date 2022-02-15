@@ -4,7 +4,7 @@
         
         private static $get;
         private static $ressources;
-        private static $db_name = "dailyCode";
+        private static $db_name = "dailycode";
         private static $db_user = "root";
         private static $db_pass = "root";
         private static $db_host = "localhost";
@@ -12,7 +12,7 @@
 
         public static function DB(){
             if(self::$database === null){
-                self::$database = new database(self::$db_name, self::$db_user, self::$db_pass, self::$db_host);
+                self::$database = database::getInstance(self::$db_name, self::$db_user, self::$db_pass, self::$db_host);
             }
             return self::$database;
         }
