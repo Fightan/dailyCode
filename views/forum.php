@@ -36,6 +36,7 @@
             <form method="post" action="?p=forum">
                 <input class="col-6" type="text" name="title" id="title" placeholder="Entrez le titre de votre sujet">
                 <div id="editor" placeholder="Entrez votre texte"></div>
+                <input id="sendForm" disabled class="sendFormInactive" type="submit" value="Poster le sujet">
             </form>
         </div>
     </div>
