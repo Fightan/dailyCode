@@ -33,10 +33,10 @@
         </div>
         <div class="row">
             <h2>Nouveau sujet</h2>
-            <form method="get" action="?p=forum">
+            <form method="post" action="?p=forum">
                 <input class="col-6" type="text" name="title" id="title" placeholder="Entrez le titre de votre sujet">
                 <div id="editor" placeholder="Entrez votre texte"></div>
-                <input id="sendForm" class="sendFormInactive" type="button" value="Poster le sujet">
+                <input id="sendForm" disabled class="sendFormInactive" type="submit" value="Poster le sujet">
             </form>
         </div>
     </div>
