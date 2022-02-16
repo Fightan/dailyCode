@@ -22,5 +22,9 @@ $(function(){
     });
     $(".trumbowyg-box").on("focusout", function(){
         $(this).addClass("editorInactive").removeClass("editorActive");
-    })
+    });
+
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
 });

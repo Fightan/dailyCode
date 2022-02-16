@@ -65,10 +65,18 @@ a{
         #table{
             width: 100%;
 
+            tr:not(#main){
+                transition: transform 0.05s ease-in-out;
+                &:hover{
+                    transform: translateX(10px);
+                }
+            }
+
             th, td {
                 padding: 1em;
                 padding-left: 2em;
                 padding-right: 2em;
+                
             }
 
             th{
@@ -89,11 +97,12 @@ a{
                 background-color: white;
                 animation-fill-mode: forwards;
                 animation: grow 0.5s;
+                
             }
             tr:nth-child(even){
                 background-color: @forumColor;
-                animation: grow 0.75s;
                 animation-fill-mode: forwards;
+                animation: grow 0.75s;
             }
         }
     }
@@ -123,6 +132,8 @@ a{
         }
 
         input{
+            animation-fill-mode: forwards;
+            animation: grow 0.5s;
             padding: 0.75em;
             box-sizing: border-box;
             border: 1px solid @forumColor;
@@ -142,12 +153,13 @@ a{
     }
 
     .trumbowyg-box{
+        animation-fill-mode: forwards;
+        animation: grow 0.5s;
         margin-top: 30px;
         margin-bottom: 25px;
         border-radius: 10px;
         border: 1px solid @forumColor;
         background-color: white;
-
     }
     
     .trumbowyg-button-pane{
