@@ -17,13 +17,26 @@
                     <th>Réponses</th>
                     <th>Date</th>
                 </tr>
-                <tr>
-                    <td class="link"><a href="">Entry First Line 1</a></td>
-                    <td>Entry First Line 2</td>
-                    <td>Entry First Line 3</td>
-                    <td>Entry First Line 4</td>
-                </tr>
+                <?php
+                    foreach(sujet::getAll() as $message){
+                        echo <<<html
+                            <tr>
+                                <td class="link"><a href="?p$message->id_sujet">$message->nom_sujet</a></td>
+                                <td>$message->auteur</td>
+                                <td>$message->reponses</td>
+                                <td>$message->date</td>
+                            </tr>
+                        html;
+                    }
+                ?>
             </table> 
+        </div>
+        <div class="row">
+            <h2>Nouveau sujet</h2>
+            <form method="post" action="?p=forum">
+                <input class="col-6" type="text" name="title" id="title" placeholder="Entrez le titre de votre sujet">
+                <div id="editor" placeholder="Entrez votre texte"></div>
+            </form>
         </div>
     </div>
 </div>

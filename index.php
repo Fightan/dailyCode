@@ -17,6 +17,7 @@
         <link rel="stylesheet/less" href="style/footer.less">
         <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <?= app::listRessources() ?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
         <script src="js/<?= $cssJs ?>.js" async></script>
     </head>

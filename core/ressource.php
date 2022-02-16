@@ -6,7 +6,8 @@
 
         public function __construct($url){
             $this->url = $url; 
-            $extension = substr($url, stripos($url, ".")+1);
+            $path = parse_url($url, PHP_URL_PATH);
+            $extension = pathinfo($path, PATHINFO_EXTENSION);
             $this->type = $extension;
         }
 
