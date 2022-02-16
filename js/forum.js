@@ -6,12 +6,21 @@ $(function(){
 
         if(!$("#editor").is(":empty")){
             $("#sendForm").removeClass("sendFormInactive").addClass("sendFormActive");
+            $("#sendForm").removeAttr("disabled");
         }else{
             if($("#editor").html != "<p><br></p>"){
                 $("#sendForm").addClass("sendFormInactive").removeClass("sendFormActive");
+                $("#sendForm").attr("disabled", "disabled");
             }else{
                 $("#sendForm").removeClass("sendFormInactive").addClass("sendFormActive");
+                $("#sendForm").attr("disabled", "disabled");
             }
         }
     });
+    $(".trumbowyg-box").on("focusin", function(){
+        $(this).removeClass("editorInactive").addClass("editorActive");
+    });
+    $(".trumbowyg-box").on("focusout", function(){
+        $(this).addClass("editorInactive").removeClass("editorActive");
+    })
 });

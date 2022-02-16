@@ -108,6 +108,10 @@ a{
             padding-left: 2em;
             padding-right: 2em;
             color: white;
+            border: none;
+            &:focus{
+                border: none;
+            }
         }
 
         .sendFormInactive{
@@ -128,6 +132,13 @@ a{
             outline: none;
             border: 1px solid @secondaryColor;
         }
+
+        .editorActive{
+            border: 1px solid @secondaryColor;
+        }
+        .editorInactive{
+            border: 1px solid @forumColor;
+        }
     }
 
     .trumbowyg-box{
@@ -140,7 +151,8 @@ a{
     }
     
     .trumbowyg-button-pane{
-        border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 }
 
