@@ -25,8 +25,10 @@
         }
 
         public static function listRessources(){
-            foreach(self::$ressources as $r){
-                $r->getBalise();
+            if(self::$ressources != []){
+                foreach(self::$ressources as $r){
+                    $r->getBalise();
+                }
             }
         }
 

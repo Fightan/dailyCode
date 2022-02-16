@@ -104,6 +104,24 @@ a{
 
 
     form{
+        #sendForm{
+            padding-left: 2em;
+            padding-right: 2em;
+            color: white;
+            border: none;
+            &:focus{
+                border: none;
+            }
+        }
+
+        .sendFormInactive{
+            background-color: @primaryColor;
+        }
+
+        .sendFormActive{
+            background-color: @secondaryColor;
+        }
+
         input{
             padding: 0.75em;
             box-sizing: border-box;
@@ -113,6 +131,13 @@ a{
         input:focus{
             outline: none;
             border: 1px solid @secondaryColor;
+        }
+
+        .editorActive{
+            border: 1px solid @secondaryColor;
+        }
+        .editorInactive{
+            border: 1px solid @forumColor;
         }
     }
 
@@ -126,7 +151,8 @@ a{
     }
     
     .trumbowyg-button-pane{
-        border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 }
 
