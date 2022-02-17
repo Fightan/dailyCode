@@ -27,18 +27,23 @@ $(function(){
     const checkTitle = /^[a-zA-Z0-9]*$/;
     $("#title").on("input", function(){
         if($(this).val().length < 3){
-            $("#titleLengthError").removeClass("d-none")
-            $(this).addClass("wrong").removeClass("notWrong");
+            $("#titleLengthError").removeClass("d-none");
         }else{
-            $("#titleLengthError").addClass("d-none")
-            $(this).removeClass("wrong").addClass("notWrong");
+            $("#titleLengthError").addClass("d-none");
         }
+
         if(!checkTitle.test($(this).val())){
             $("#titleCharactersError").removeClass("d-none");
-            $(this).addClass("wrong").removeClass("notWrong");
         }else{
             $("#titleCharactersError").addClass("d-none");
-            $(this).removeClass("wrong").addClass("notWrong");
+        }
+
+        if($(this).val() < 3 || !checkTitle.test($(this).val())){
+            console.log("1")
+            $(this).removeClass("wrong title").addClass("notWrong");
+        }else{
+            console.log("2")
+            $(this).addClass("wrong").removeClass("notWrong title");
         }
     });
 
