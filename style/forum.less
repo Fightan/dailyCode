@@ -52,6 +52,7 @@ a{
     margin-top: 25px;
     margin-bottom: 25px;
     padding: 0px;
+
     .row:first-child{
         border: 1px solid @forumColor;
         margin-bottom: 25px;
@@ -122,11 +123,9 @@ a{
                 border: none;
             }
         }
-
         .sendFormInactive{
             background-color: @primaryColor;
         }
-
         .sendFormActive{
             background-color: @secondaryColor;
         }
@@ -160,6 +159,14 @@ a{
         border-radius: 10px;
         border: 1px solid @forumColor;
         background-color: white;
+    }
+
+    .trumbowyg-boxWrong{
+        border: 1px solid red;
+    }
+
+    .trumbowyg-boxNotWrong{
+        border: 1px solid @forumColor;
     }
     
     .trumbowyg-button-pane{

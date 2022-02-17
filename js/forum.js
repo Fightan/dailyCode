@@ -24,7 +24,15 @@ $(function(){
         $(this).addClass("editorInactive").removeClass("editorActive");
     });
 
-    if ( window.history.replaceState ) {
+    // $("#form").on("submit", function(event){
+    //     event.preventDefault();
+
+    //     $.post("?p=forum", $(this).serialize(), function(data){
+    //         console.log(data);
+    //     })
+    // })
+
+    if(window.history.replaceState){
         window.history.replaceState( null, null, window.location.href );
     }
 });
