@@ -5,6 +5,7 @@
     autoloader::register();
     app::listGet();
 
+    ob_start();
     switch(app::get("p")){
         case "accueil":
             $titre = "Accueil";
