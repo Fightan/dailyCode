@@ -4,19 +4,25 @@
         private static $sujets;
         private $id_sujet;
         private $nom_sujet;
+        private $message;
         private $auteur;
         private $reponses;
         private $date;
         const TABLE = "forum";
        
-        public function __construct($id_sujet = "00000", $nom_sujet = "New subject", $auteur = "Anonym", $reponses = 0, $date = "Today"){
+        public function __construct($id_sujet = "00000", $nom_sujet = "New subject", $message = "New message", $auteur = "Anonym", $reponses = 0, $date = "Today"){
             if($id_sujet !== "00000"){
                 $this->id_sujet = $id_sujet;
                 $this->nom_sujet = $nom_sujet;
+                $this->message = $message;
                 $this->auteur = $auteur;
                 $this->reponses = $reponses;
                 $this->date = $date;
             }
+        }
+
+        public static function addSujet(){
+            app::DB()->prepare("INSERT INTO ".static::TABLE." VALUES (:id_sujet, :nom_sujet, :message, :auteur, :reponses, :date)", array(":id_sujet"=>$_POST["title"].rand(1,1000), ":nom_sujet"=>$_POST["title"], ":message"=>$_POST["editor"], ":auteur"=>"Fightan", ":reponses"=>1, ":date"=>"Aujourd'hui"), get_called_class());
         }
 
         public static function getAll(){
