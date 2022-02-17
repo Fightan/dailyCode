@@ -52,6 +52,7 @@ a{
     margin-top: 25px;
     margin-bottom: 25px;
     padding: 0px;
+
     .row:first-child{
         border: 1px solid @forumColor;
         margin-bottom: 25px;
@@ -65,10 +66,18 @@ a{
         #table{
             width: 100%;
 
+            tr:not(#main){
+                transition: transform 0.05s ease-in-out;
+                &:hover{
+                    transform: translateX(10px);
+                }
+            }
+
             th, td {
                 padding: 1em;
                 padding-left: 2em;
                 padding-right: 2em;
+                
             }
 
             th{
@@ -89,11 +98,12 @@ a{
                 background-color: white;
                 animation-fill-mode: forwards;
                 animation: grow 0.5s;
+                
             }
             tr:nth-child(even){
                 background-color: @forumColor;
-                animation: grow 0.75s;
                 animation-fill-mode: forwards;
+                animation: grow 0.75s;
             }
         }
     }
@@ -113,16 +123,16 @@ a{
                 border: none;
             }
         }
-
         .sendFormInactive{
             background-color: @primaryColor;
         }
-
         .sendFormActive{
             background-color: @secondaryColor;
         }
 
         input{
+            animation-fill-mode: forwards;
+            animation: grow 0.5s;
             padding: 0.75em;
             box-sizing: border-box;
             border: 1px solid @forumColor;
@@ -139,15 +149,31 @@ a{
         .editorInactive{
             border: 1px solid @forumColor;
         }
+
+        .error{
+            color: red;
+            padding-left: 12px;
+            font-size: 0.9em;
+            padding-top: 5px;
+        }
     }
 
     .trumbowyg-box{
+        animation-fill-mode: forwards;
+        animation: grow 0.5s;
         margin-top: 30px;
         margin-bottom: 25px;
         border-radius: 10px;
         border: 1px solid @forumColor;
         background-color: white;
+    }
 
+    .wrong{
+        border: 1px solid red;
+    }
+
+    .notWrong{
+        border: 1px solid green;
     }
     
     .trumbowyg-button-pane{

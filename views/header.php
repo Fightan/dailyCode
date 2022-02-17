@@ -8,19 +8,20 @@
                 </a>
             </div>
             <div class="menu col-8 col-md-6 d-flex justify-content-between">
-                <div class="link d-flex justify-content-center align-items-center"><a href="?p=accueil">Accueil</a></div>
-                <div class="link d-flex justify-content-center align-items-center"><a href="?p=articles">Articles</a></div>
-                <div class="link d-flex justify-content-center align-items-center"><a href="?p=forum">Forum</a></div>
-                <div class="link d-flex justify-content-center align-items-center"><a href="?p=contact">Contact</a></div>
-                <div class="link d-flex justify-content-center align-items-center"><a href="?p=a_propos">À propos</a></div>
+                <a class="link" href="?p=accueil"><div class="link d-flex justify-content-center align-items-center"><span>Accueil</span></div></a>
+                <a class="link" href="?p=articles"><div class="link d-flex justify-content-center align-items-center"><span>Articles</span></div></a>
+                <a class="link" href="?p=forum"><div class="link d-flex justify-content-center align-items-center"><span>Forum</span></div></a>
+                <a class="link" href="?p=contact"><div class="link d-flex justify-content-center align-items-center"><span>Contact</span></div></a>
+                <a class="link" href="?p=a_propos"><div class="link d-flex justify-content-center align-items-center"><span>À propos</span></div></a>
             </div>
             <div class="login col-2 d-flex justify-content-end">
+                <a href="?p=compte">
                 <div class="link d-flex justify-content-center align-items-center">
-                    <a href="">
-                        <span>Login</span>
-                        <i id="login" class="fa-solid fa-lg fa-arrow-right-to-bracket"></i>
-                    </a>
-                </div>
+                        <span>Login
+                            <i id="login" class="fa-solid fa-lg fa-arrow-right-to-bracket"></i>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
