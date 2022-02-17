@@ -15,12 +15,12 @@
         case "articles":
             $titre = "Articles";
             $cssJs = "articles";
-            app::afficher("Articles"); //votre_article::afficher();
+            app::afficher("articles"); //votre_article::afficher();
             break;
         case "forum":
             $titre = "Forum";
             $cssJs = "forum";
-            require("./controllers/forum.php"); //forum::afficher();   
+            app::afficher("forum");
             break;
         case "contact":
             $titre = "Contact";
@@ -31,6 +31,11 @@
             $titre = "À propos";
             $cssJs = "a_propos";
             app::afficher("a_propos");
+            break;
+        case "compte":
+            $titre = "Compte";
+            $cssJs = "compte";
+            app::afficher("compte");
             break;
         default:
             $titre = "Accueil";
